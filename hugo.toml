@@ -1,7 +1,7 @@
 baseURL = 'https://shuamanory.github.io'
 locale = 'en-us'
 title = 'Shua Manory'
-theme = 'shibui'
+theme = "hugo-theme-sigil"
 [params]
   [params.contact]
     email = 'shuamanory@gmail.com'

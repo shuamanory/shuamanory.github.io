@@ -2,22 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shua Manory</title>
-    <link>https://shuamanory.github.io/</link>
-    <description>Recent content on Shua Manory</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shuamanory.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://shuamanory.github.io/about/</link>
-      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://shuamanory.github.io/about/</guid>
-      <description>&lt;h1 id=&#34;shua-manory&#34;&gt;
-  Shua Manory
-&lt;/h1&gt;
-&lt;p&gt;I&amp;rsquo;m currently a freshman at the university of Cincinnati.&lt;/p&gt;</description>
-    </item>
-    
+    <link>http://localhost:1313/</link>
+    <description></description>
+    <language>en</language>
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 &#43;0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
