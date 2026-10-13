@@ -1,0 +1,6 @@
+github.com/hugomods/encrypt v0.4.0 h1:oDZ63Z0qvQRzMLQvGETXGZOaWvWbHR1GzC3CDsQ0gPQ=
+github.com/hugomods/encrypt v0.4.0/go.mod h1:negeZEtF4MhMBwHY0BvCueVwJbgxXzamDXaIWcLHyZM=
+github.com/hugomods/icons v0.6.6 h1:gGlafcBDRP7sSID+tgLcWdog+s/QBj8DIfU+h9tZj1U=
+github.com/hugomods/icons v0.6.6/go.mod h1:cIkSvK6W0q6N4U6n9KGz+QfRWQXAW0INd+1P31gPNGg=
+github.com/twbs/icons v1.13.2 h1:JFC5SbgEQfp/zA4NnbwIod6WKlGPSV199H+szopB70E=
+github.com/twbs/icons v1.13.2/go.mod h1:GnRlymgVWp5iVJCMa0Me5b6tFyGpVc2bSxPMRGIJmyA=

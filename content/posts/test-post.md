@@ -2,6 +2,7 @@
 date = '2026-09-27T23:36:01-04:00'
 draft = true
 title = 'Test Post'
+tags = ['test']
 +++
 
 ## wow 
