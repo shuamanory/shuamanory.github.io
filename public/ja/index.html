@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.166.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>SIGIL</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/ja/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f032aed6f7e601646c199443af856086846f67046a9a952883289315b56dea44.css" integrity="sha256-8DKu1vfmAWRsGZRDr4VghoRvZwRqmpUogyiTFbVt6kQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/ja/index.xml" title="rss">
+<link rel="alternate" hreflang="zh-cn" href="http://localhost:1313/zh-cn/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/ja/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+<link rel="preload" href="/fonts/ibm-plex/result.css" as="style">
+<link rel="stylesheet" href="/fonts/ibm-plex/result.css"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/zh-cn/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SIGIL — ">
+<script>
+(function () {
+    var light = "#f4f6f3", dark = "#151917";
+    var userColor = null;
+    function apply() {
+        var mode = document.documentElement.getAttribute("data-theme") || "auto";
+        var isDark = mode === "dark" || (mode !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+            m.setAttribute("content", userColor || (isDark ? dark : light));
+        });
+    }
+    document.addEventListener("click", function (e) {
+        if (e.target && e.target.closest && e.target.closest("#theme-toggle")) setTimeout(apply, 60);
+    });
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", apply);
+    apply();
+})();
+</script>
+<script>
+(function () {
+    var root = document.documentElement;
+    root.classList.add("sg-js");
+    function setup() {
+        if (!("IntersectionObserver" in window)) return;
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                en.target.classList.add("is-inview");
+                io.unobserve(en.target);
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll(".sg-section-head, .post-header").forEach(function (el) {
+            io.observe(el);
+        });
+         
+        setTimeout(function () {
+            document.querySelectorAll(".sg-section-head, .post-header").forEach(function (el) {
+                el.classList.add("is-inview");
+            });
+        }, 1200);
+    }
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setup);
+    } else {
+        setup();
+    }
+    document.addEventListener("click", function (e) {
+        if (e.target && e.target.closest && e.target.closest("#theme-toggle")) {
+             
+            if (document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            root.classList.add("sg-theme-anim");
+            setTimeout(function () { root.classList.remove("sg-theme-anim"); }, 420);
+        }
+    });
+})();
+</script>
+<script data-sg="sidenote">
+(function () {
+    function ready(fn) {
+        if (document.readyState !== "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+    }
+    function build() {
+        if (!document.querySelector(".post-content") || !document.querySelector(".footnotes")) return;
+        if (!(window.CSS && CSS.supports && CSS.supports("selector(:has(a))"))) return;
+        var notes = document.querySelectorAll('.footnotes ol > li[id^="fn:"]');
+        notes.forEach(function (li) {
+            var num = li.id.slice(3);
+            var ref = document.querySelectorAll('a[href="#fn:' + num + '"]')[0];
+            if (!ref) return;
+            var block = ref.closest("p, li");
+            if (!block || block.querySelector('.sidenote[data-for="fn:' + num + '"]')) return;
+            var side = document.createElement("span");
+            side.className = "sidenote";
+            side.setAttribute("data-for", "fn:" + num);
+            side.innerHTML = '<span class="sidenote-number">' + num + "</span> " + li.innerHTML;
+            var back = side.querySelector(".footnote-backlink");
+            if (back) back.remove();
+            block.appendChild(side);
+            var refSup = ref.closest("sup") || ref.parentElement;
+            function point(on) {
+                side.classList.toggle("is-pointed", on);
+                refSup.classList.toggle("is-pointed", on);
+            }
+            side.addEventListener("mouseenter", function () { point(true); });
+            side.addEventListener("mouseleave", function () { point(false); });
+            ref.addEventListener("mouseenter", function () { point(true); });
+            ref.addEventListener("mouseleave", function () { point(false); });
+        });
+        
+        
+        
+        
+        
+        var converted = 0;
+        notes.forEach(function (li) {
+            var num = li.id.slice(3);
+            if (document.querySelector('.sidenote[data-for="fn:' + num + '"]')) converted++;
+        });
+        var content = document.querySelector(".post-content");
+        if (content) {
+            content.classList.toggle("sg-sidenotes-complete", notes.length > 0 && converted === notes.length);
+        }
+    }
+    ready(build);
+    window.addEventListener("load", build);
+    setTimeout(build, 1500);
+})();
+</script>
+
+</head>
+<body class="list" id="top">
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
+    <header class="header">
+    <nav class="nav" aria-label="サイトナビゲーション">
+        <div class="logo">
+            <a href="http://localhost:1313/ja/" accesskey="h" title="SIGIL (Alt + H)">SIGIL</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="moon" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M238,96a6,6,0,0,1-6,6H214v18a6,6,0,0,1-12,0V102H184a6,6,0,0,1,0-12h18V72a6,6,0,0,1,12,0V90h18A6,6,0,0,1,238,96ZM144,54h10V64a6,6,0,0,0,12,0V54h10a6,6,0,0,0,0-12H166V32a6,6,0,0,0-12,0V42H144a6,6,0,0,0,0,12Zm71.25,100.28a6,6,0,0,1,1.07,6A94,94,0,1,1,95.76,39.68a6,6,0,0,1,7.94,6.79A90.11,90.11,0,0,0,192,154a90.9,90.9,0,0,0,17.53-1.7A6,6,0,0,1,215.25,154.28Zm-14.37,11.34q-4.42.38-8.88.38A102.12,102.12,0,0,1,90,64q0-4.45.38-8.88a82,82,0,1,0,110.5,110.5Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" id="sun" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M122,40V16a6,6,0,0,1,12,0V40a6,6,0,0,1-12,0Zm68,88a62,62,0,1,1-62-62A62.07,62.07,0,0,1,190,128Zm-12,0a50,50,0,1,0-50,50A50.06,50.06,0,0,0,178,128ZM59.76,68.24a6,6,0,1,0,8.48-8.48l-16-16a6,6,0,0,0-8.48,8.48Zm0,119.52-16,16a6,6,0,1,0,8.48,8.48l16-16a6,6,0,1,0-8.48-8.48ZM192,70a6,6,0,0,0,4.24-1.76l16-16a6,6,0,0,0-8.48-8.48l-16,16A6,6,0,0,0,192,70Zm4.24,117.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48-8.48ZM46,128a6,6,0,0,0-6-6H16a6,6,0,0,0,0,12H40A6,6,0,0,0,46,128Zm82,82a6,6,0,0,0-6,6v24a6,6,0,0,0,12,0V216A6,6,0,0,0,128,210Zm112-88H216a6,6,0,0,0,0,12h24a6,6,0,0,0,0-12Z"/></svg>
+                </button>
+                    <ul class="lang-switch" aria-label="Language switcher">
+                        <li>
+                            <a href="http://localhost:1313/zh-cn/" title="简体中文"
+                                aria-label="简体中文">中文</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:1313/" title="En"
+                                aria-label="En">EN</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="" title="アーカイブ">
+                    <span>アーカイブ</span>
+                </a>
+            </li>
+            <li>
+                <a href="" title="ドキュメント">
+                    <span>ドキュメント</span>
+                </a>
+            </li>
+            <li>
+                <a href="" title="組版">
+                    <span>組版</span>
+                </a>
+            </li><li>
+                <a href="" title="検索 (Alt + /)"
+                    accesskey=/ aria-label="検索">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M228.24,219.76l-51.38-51.38a86.15,86.15,0,1,0-8.48,8.48l51.38,51.38a6,6,0,0,0,8.48-8.48ZM38,112a74,74,0,1,1,74,74A74.09,74.09,0,0,1,38,112Z"/></svg>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main" id="main-content"><div class="sg-home">
+  <section class="sg-hero" aria-labelledby="sg-title">
+    <div class="sg-hero__copy">
+      <h1 id="sg-title">SIGIL</h1>
+      <p class="sg-hero__intro">Hugo の控えめな文学テーマ——紙とインク、三つ組。長文、研究ノート、読書録。フィードではなく、紙面のために組む。</p>
+    </div><figure class="sg-seal">
+        <div class="sg-seal__frame"><span class="sg-seal__glyph" aria-hidden="true">
+            <svg viewBox="0 0 72 72" role="presentation" focusable="false">
+              <g class="sg-seal__eyes">
+                <circle cx="22" cy="26" r="4.5" />
+                <circle cx="50" cy="26" r="4.5" />
+              </g>
+              <circle cx="36" cy="48" r="4.5" />
+            </svg>
+          </span>
+        </div>
+      </figure>
+    </section>
+  <script>
+  (function () {
+      var seal = document.querySelector(".sg-seal__glyph");
+      if (!seal) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+      var frame = seal.closest(".sg-seal__frame") || seal;
+      var host = document.querySelector(".sg-hero") || seal.closest("section");
+      if (!host) return;
+
+      
+
+      var rect = frame.getBoundingClientRect();
+      var cx = rect.left + rect.width / 2;
+      var cy = rect.top + rect.height / 2;
+      var R = rect.width / 2;
+       
+      var MAX = R * 0.30;
+
+      
+
+      var x = 0, y = 0, vx = 0, vy = 0, tx = 0, ty = 0;
+      var STIFF = 190, DAMP = 22;
+      var STEP = 1 / 240;           
+      var last = 0, raf = 0, acc = 0;
+
+      function integrate(dt) {
+          acc += dt;
+           
+          if (acc > 0.25) acc = 0.25;
+          while (acc >= STEP) {
+              var ax = (tx - x) * STIFF - vx * DAMP;
+              var ay = (ty - y) * STIFF - vy * DAMP;
+              vx += ax * STEP; vy += ay * STEP;
+              x += vx * STEP; y += vy * STEP;
+              acc -= STEP;
+          }
+      }
+
+      function settled() {
+          return Math.abs(x - tx) < 0.05 && Math.abs(y - ty) < 0.05
+              && Math.abs(vx) < 0.05 && Math.abs(vy) < 0.05;
+      }
+
+      function paint() {
+          
+
+          seal.style.setProperty("--eye-x", (x / 72).toFixed(4));
+          seal.style.setProperty("--eye-y", (y / 72).toFixed(4));
+      }
+
+      function draw(now) {
+          if (!last) last = now;
+          var dt = (now - last) / 1000;
+          last = now;
+          integrate(dt);
+          paint();
+          if (settled()) {
+               
+              x = tx; y = ty; vx = 0; vy = 0; acc = 0;
+              paint();
+              raf = 0; last = 0;
+              return;
+          }
+          raf = requestAnimationFrame(draw);
+      }
+
+      function wake() { if (!raf) raf = requestAnimationFrame(draw); }
+
+      function aim(clientX, clientY) {
+          var nx = (clientX - cx) / R, ny = (clientY - cy) / R;
+           
+          if (!isFinite(nx) || !isFinite(ny)) { tx = 0; ty = 0; return; }
+          tx = Math.max(-1, Math.min(1, nx)) * MAX;
+          ty = Math.max(-1, Math.min(1, ny)) * MAX;
+      }
+
+      function idle() { tx = 0; ty = 0; wake(); }
+
+      document.addEventListener("pointermove", function (e) {
+          var r = host.getBoundingClientRect();
+          if (e.clientY < r.top || e.clientY > r.bottom) { idle(); return; }
+          aim(e.clientX, e.clientY);
+          wake();
+      }, { passive: true });
+
+      document.addEventListener("pointerleave", idle, { passive: true });
+      window.addEventListener("scroll", function () {
+          var r = host.getBoundingClientRect();
+          if (r.bottom <= 0 || r.top >= window.innerHeight) idle();
+      }, { passive: true });
+
+      window.addEventListener("blur", idle);
+      document.addEventListener("visibilitychange", function () {
+          if (document.hidden) idle();
+      });
+  })();
+  </script>
+</div>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/ja/">SIGIL</a></span>
+
+    <span class="tri-sep" aria-hidden="true">∴</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>;
+        theme
+        <a href="https://github.com/ouatis/hugo-theme-sigil/" rel="noopener noreferrer" target="_blank">SIGIL</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M204.24,116.24a6,6,0,0,1-8.48,0L134,54.49V216a6,6,0,0,1-12,0V54.49L60.24,116.24a6,6,0,0,1-8.48-8.48l72-72a6,6,0,0,1,8.48,0l72,72A6,6,0,0,1,204.24,116.24Z"/></svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", (e) => {
+        const html = document.querySelector("html");
+        const flip = () => {
+            if (html.dataset.theme === "dark") {
+                html.dataset.theme = "light";
+                localStorage.setItem("pref-theme", "light");
+            } else {
+                html.dataset.theme = "dark";
+                localStorage.setItem("pref-theme", "dark");
+            }
+             
+            document.dispatchEvent(new CustomEvent("sg:themechange", { detail: { theme: html.dataset.theme } }));
+        };
+        
+
+        if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            flip();
+            return;
+        }
+        let x = e.clientX, y = e.clientY;
+        if (!x && !y) {
+            const r = e.currentTarget.getBoundingClientRect();
+            x = r.left + r.width / 2;
+            y = r.top + r.height / 2;
+        }
+        const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        const transition = document.startViewTransition(flip);
+        transition.ready.then(() => {
+            document.documentElement.animate(
+                {
+                    clipPath: [
+                        `circle(0px at ${x}px ${y}px)`,
+                        `circle(${endRadius}px at ${x}px ${y}px)`,
+                    ],
+                },
+                {
+                    duration: 400,
+                    easing: "ease-in-out",
+                    pseudoElement: "::view-transition-new(root)",
+                },
+            );
+        });
+    })
+</script>
+</body>
+
+</html>
