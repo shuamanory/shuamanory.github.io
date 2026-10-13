@@ -2,52 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shua Manory</title>
-    <link>http://localhost:1313/</link>
+    <link>https://shuamanory.github.io/</link>
     <description>Recent content on Shua Manory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-    <lastBuildDate>Mon, 12 Oct 2026 05:02:42 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>testing markdown footnotes</title>
-      <link>http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/</link>
-      <pubDate>Mon, 28 Sep 2026 15:13:50 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/</guid>
-      <description>&lt;p&gt;Apparently markdown support simple, automatically linked footnotes.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;It works! Honestly pretty cool, better than I expected. Although this isn&amp;rsquo;t native markdown - it&amp;rsquo;s an extension. I managed to install it in my other SSG too, it&amp;rsquo;s amazing.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Test Two</title>
-      <link>http://localhost:1313/posts/test-two/</link>
-      <pubDate>Mon, 28 Sep 2026 00:58:21 -0400</pubDate>
-      <guid>http://localhost:1313/posts/test-two/</guid>
-      <description>&lt;p&gt;That sure took a while to show up. Github pages is sort of difficult figure out, but it seems to be working somewhat.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Test Post</title>
-      <link>http://localhost:1313/posts/test-post/</link>
-      <pubDate>Sun, 27 Sep 2026 23:36:01 -0400</pubDate>
-      <guid>http://localhost:1313/posts/test-post/</guid>
-      <description>&lt;h2 id=&#34;wow&#34;&gt;
-  wow
-&lt;/h2&gt;
-&lt;p&gt;this is so fun&amp;hellip; I&amp;rsquo;m making a website without writing code by hand, simply incredible. these framework things are amazing.. maybe I should&amp;rsquo;ve been using hugo this whole time rather than suffering through the work of handcoding layouts and setting up ultra-simple static site generators, I don&amp;rsquo;t know why I was so averse to this.. it&amp;rsquo;s not like some kind of terrible crime to have the work done for you. Besides this isn&amp;rsquo;t nearly as bad as using wordpress or something&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://shuamanory.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/about/</link>
+      <link>https://shuamanory.github.io/about/</link>
       <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>https://shuamanory.github.io/about/</guid>
       <description>&lt;h1 id=&#34;shua-manory&#34;&gt;
   Shua Manory
 &lt;/h1&gt;
