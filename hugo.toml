@@ -15,5 +15,3 @@ theme = "hugo-theme-sigil"
 [module]
   [[module.imports]]
     path = "github.com/hugomods/encrypt"
-[imaging]
-    invertDarkModeImages = false

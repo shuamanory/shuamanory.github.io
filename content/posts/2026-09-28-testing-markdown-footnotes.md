@@ -1,9 +1,9 @@
 ---
-title: testing markdown footnotes
-description: ""
+title: Markdown Footnotes
+description: "Markdown is kind of cool..."
 date: 2026-09-28T15:13:50.023Z
 preview: ""
-draft: true
+draft: false
 tags: ['markdown', 'test']
 categories: []
 ---

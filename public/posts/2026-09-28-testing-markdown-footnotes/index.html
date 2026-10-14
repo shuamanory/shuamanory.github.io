@@ -1,123 +1,301 @@
-<!doctype html>
-<html
-  lang="en-us"
-  dir="ltr"
->
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
 
-<title>
-  testing markdown footnotes | Shua Manory
-</title>
- 
-<link rel="canonical" href="http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/" />
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Markdown Footnotes | Shua Manory</title>
+<meta name="keywords" content="markdown, test">
+<meta name="description" content="Markdown is kind of cool...">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.e36cb861412c329d9347355acb59be3aebbedf99307d0f21fb95eda190cfb44c.css" integrity="sha256-42y4YUEsMp2TRzVay1m&#43;Ouu&#43;35kwfQ8h&#43;5XtoZDPtEw=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
 
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
 
-<meta property="og:title" content="testing markdown footnotes" />
+            .list {
+                background: var(--theme);
+            }
 
-<meta
-  property="og:type"
-  content="article"
-/>
-<meta property="og:url" content="http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/" />
- 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="testing markdown footnotes" />
-      
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "testing markdown footnotes",
-    "url": "http:\/\/localhost:1313\/posts\/2026-09-28-testing-markdown-footnotes\/",
-    "datePublished": "2026-09-28T15:13:50Z",
-    "dateModified": "2026-09-28T15:13:50Z"
-  }
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
 </script>
- <link rel="apple-touch-icon" sizes="57x57" href="/favicon_io/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/favicon_io/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/favicon_io/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/favicon_io/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/favicon_io/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/favicon_io/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/favicon_io/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/favicon_io/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/favicon_io/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon_io/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="/favicon_io/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/favicon_io/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
- 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/custom.css">
+<style>
+    #sg-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 0%;
+        height: 2px;
+        background: var(--sg-red);
+        opacity: 0;
+        transition: opacity 200ms ease;
+        pointer-events: none;
+    }
 
+    #sg-progress.visible {
+        opacity: 1;
+    }
+</style>
+<script>
+    (function () {
+        var bar = document.createElement("div");
+        bar.id = "sg-progress";
+        document.body.appendChild(bar);
 
-    
+        var ticking = false;
+        var last = -1;
 
-    
+        function update() {
+            ticking = false;
+            var doc = document.documentElement;
+            var total = doc.scrollHeight - doc.clientHeight;
+            var pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+            if (Math.abs(pct - last) < 0.15) return;
+            last = pct;
+            bar.style.width = pct.toFixed(2) + "%";
+            bar.classList.toggle("visible", window.scrollY > 120);
+        }
 
-  </head>
-  <body>
-    <a href="#main-content" class="skip-link">Skip to content</a>
-    <header role="banner"><nav class="path-nav" aria-label="Breadcrumb">
-  <ol>
-    
-  
-    
-  
-    
-  
-  <li>
-    /
-    <a href="/">Shua Manory</a>
-    /
-  </li>
+        window.addEventListener("scroll", function () {
+            if (!ticking) {
+                ticking = true;
+                window.requestAnimationFrame(update);
+            }
+        }, { passive: true });
+        update();
+    })();
+</script>
+<link rel="preload" href="/fonts/ibm-plex/result.css" as="style">
+<link rel="stylesheet" href="/fonts/ibm-plex/result.css"><link rel="alternate" hreflang="x-default" href="http://localhost:1313/posts/2026-09-28-testing-markdown-footnotes/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shua Manory — ">
+<script>
+(function () {
+    var light = "#f4f6f3", dark = "#151917";
+    var userColor = null;
+    function apply() {
+        var mode = document.documentElement.getAttribute("data-theme") || "auto";
+        var isDark = mode === "dark" || (mode !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+            m.setAttribute("content", userColor || (isDark ? dark : light));
+        });
+    }
+    document.addEventListener("click", function (e) {
+        if (e.target && e.target.closest && e.target.closest("#theme-toggle")) setTimeout(apply, 60);
+    });
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", apply);
+    apply();
+})();
+</script>
+<script>
+(function () {
+    var root = document.documentElement;
+    root.classList.add("sg-js");
+    function setup() {
+        if (!("IntersectionObserver" in window)) return;
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (!en.isIntersecting) return;
+                en.target.classList.add("is-inview");
+                io.unobserve(en.target);
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll(".sg-section-head, .post-header").forEach(function (el) {
+            io.observe(el);
+        });
+         
+        setTimeout(function () {
+            document.querySelectorAll(".sg-section-head, .post-header").forEach(function (el) {
+                el.classList.add("is-inview");
+            });
+        }, 1200);
+    }
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setup);
+    } else {
+        setup();
+    }
+    document.addEventListener("click", function (e) {
+        if (e.target && e.target.closest && e.target.closest("#theme-toggle")) {
+             
+            if (document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            root.classList.add("sg-theme-anim");
+            setTimeout(function () { root.classList.remove("sg-theme-anim"); }, 420);
+        }
+    });
+})();
+</script>
+<script data-sg="sidenote">
+(function () {
+    function ready(fn) {
+        if (document.readyState !== "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+    }
+    function build() {
+        if (!document.querySelector(".post-content") || !document.querySelector(".footnotes")) return;
+        if (!(window.CSS && CSS.supports && CSS.supports("selector(:has(a))"))) return;
+        var notes = document.querySelectorAll('.footnotes ol > li[id^="fn:"]');
+        notes.forEach(function (li) {
+            var num = li.id.slice(3);
+            var ref = document.querySelectorAll('a[href="#fn:' + num + '"]')[0];
+            if (!ref) return;
+            var block = ref.closest("p, li");
+            if (!block || block.querySelector('.sidenote[data-for="fn:' + num + '"]')) return;
+            var side = document.createElement("span");
+            side.className = "sidenote";
+            side.setAttribute("data-for", "fn:" + num);
+            side.innerHTML = '<span class="sidenote-number">' + num + "</span> " + li.innerHTML;
+            var back = side.querySelector(".footnote-backlink");
+            if (back) back.remove();
+            block.appendChild(side);
+            var refSup = ref.closest("sup") || ref.parentElement;
+            function point(on) {
+                side.classList.toggle("is-pointed", on);
+                refSup.classList.toggle("is-pointed", on);
+            }
+            side.addEventListener("mouseenter", function () { point(true); });
+            side.addEventListener("mouseleave", function () { point(false); });
+            ref.addEventListener("mouseenter", function () { point(true); });
+            ref.addEventListener("mouseleave", function () { point(false); });
+        });
+        
+        
+        
+        
+        
+        var converted = 0;
+        notes.forEach(function (li) {
+            var num = li.id.slice(3);
+            if (document.querySelector('.sidenote[data-for="fn:' + num + '"]')) converted++;
+        });
+        var content = document.querySelector(".post-content");
+        if (content) {
+            content.classList.toggle("sg-sidenotes-complete", notes.length > 0 && converted === notes.length);
+        }
+    }
+    ready(build);
+    window.addEventListener("load", build);
+    setTimeout(build, 1500);
+})();
+</script>
 
-  
-  <li>
-    
-    <a href="/posts/">Posts</a>
-    /
-  </li>
-
-  
-  <li class="current">
-    
-    <a href="/posts/2026-09-28-testing-markdown-footnotes/">testing markdown footnotes</a>
-    
-  </li>
-
-  </ol>
-</nav>
-
-
-
+</head>
+<body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="header">
+    <nav class="nav" aria-label="Site navigation">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Shua Manory (Alt + H)">Shua Manory</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="moon" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M238,96a6,6,0,0,1-6,6H214v18a6,6,0,0,1-12,0V102H184a6,6,0,0,1,0-12h18V72a6,6,0,0,1,12,0V90h18A6,6,0,0,1,238,96ZM144,54h10V64a6,6,0,0,0,12,0V54h10a6,6,0,0,0,0-12H166V32a6,6,0,0,0-12,0V42H144a6,6,0,0,0,0,12Zm71.25,100.28a6,6,0,0,1,1.07,6A94,94,0,1,1,95.76,39.68a6,6,0,0,1,7.94,6.79A90.11,90.11,0,0,0,192,154a90.9,90.9,0,0,0,17.53-1.7A6,6,0,0,1,215.25,154.28Zm-14.37,11.34q-4.42.38-8.88.38A102.12,102.12,0,0,1,90,64q0-4.45.38-8.88a82,82,0,1,0,110.5,110.5Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" id="sun" width="22" height="22" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M122,40V16a6,6,0,0,1,12,0V40a6,6,0,0,1-12,0Zm68,88a62,62,0,1,1-62-62A62.07,62.07,0,0,1,190,128Zm-12,0a50,50,0,1,0-50,50A50.06,50.06,0,0,0,178,128ZM59.76,68.24a6,6,0,1,0,8.48-8.48l-16-16a6,6,0,0,0-8.48,8.48Zm0,119.52-16,16a6,6,0,1,0,8.48,8.48l16-16a6,6,0,1,0-8.48-8.48ZM192,70a6,6,0,0,0,4.24-1.76l16-16a6,6,0,0,0-8.48-8.48l-16,16A6,6,0,0,0,192,70Zm4.24,117.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48-8.48ZM46,128a6,6,0,0,0-6-6H16a6,6,0,0,0,0,12H40A6,6,0,0,0,46,128Zm82,82a6,6,0,0,0-6,6v24a6,6,0,0,0,12,0V216A6,6,0,0,0,128,210Zm112-88H216a6,6,0,0,0,0,12h24a6,6,0,0,0,0-12Z"/></svg>
+                </button>
+                    <ul class="lang-switch" aria-label="Language switcher">
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact Me">
+                    <span>Contact Me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
-    <main id="main-content" role="main">
-  <h1>testing markdown footnotes</h1>
-  
-  <div class="terms-list">
-    <ul>
-        <li><a href="/tags/markdown/">#Markdown</a></li>
-        <li><a href="/tags/test/">#Test</a></li>
-    </ul>
-  </div>
+<main class="main" id="main-content">
 
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Markdown Footnotes
+    </h1>
+    <div class="post-description">
+      Markdown is kind of cool...
+    </div>
+    <div class="post-meta"><span class='post-meta__item' title='2026-09-28 15:13:50.023 +0000 UTC'><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M208,34H182V24a6,6,0,0,0-12,0V34H86V24a6,6,0,0,0-12,0V34H48A14,14,0,0,0,34,48V208a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V48A14,14,0,0,0,208,34ZM48,46H74V56a6,6,0,0,0,12,0V46h84V56a6,6,0,0,0,12,0V46h26a2,2,0,0,1,2,2V82H46V48A2,2,0,0,1,48,46ZM208,210H48a2,2,0,0,1-2-2V94H210V208A2,2,0,0,1,208,210Zm-98-90v64a6,6,0,0,1-12,0V129.71l-7.32,3.66a6,6,0,1,1-5.36-10.74l16-8A6,6,0,0,1,110,120Zm59.57,29.25L148,178h20a6,6,0,0,1,0,12H136a6,6,0,0,1-4.8-9.6L160,142a10,10,0,1,0-16.65-11A6,6,0,1,1,133,125a22,22,0,1,1,36.62,24.26Z"/></svg>September 28, 2026</span>&nbsp;·&nbsp;<span class='post-meta__item'><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26Zm0,192a90,90,0,1,1,90-90A90.1,90.1,0,0,1,128,218Zm62-90a6,6,0,0,1-6,6H128a6,6,0,0,1-6-6V72a6,6,0,0,1,12,0v50h50A6,6,0,0,1,190,128Z"/></svg>1 min</span>&nbsp;·&nbsp;<span>37 words</span>
 
-  
-  
-  
-  
+</div>
+  </header> <span class="sg-running-head" aria-hidden="true">Markdown Footnotes</span>
+<script>
+(function () {
+    var head = document.querySelector(".sg-running-head");
+    var title = document.querySelector(".post-title");
+    if (!head || !title || !("IntersectionObserver" in window)) return;
+     
+    new IntersectionObserver(function (entries) {
+        head.classList.toggle("is-visible", !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(title);
+})();
+</script>
 
-   
-   <p>Apparently markdown support simple, automatically linked footnotes.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+  <div class="post-content"><p>Apparently markdown support simple, automatically linked footnotes.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -127,38 +305,181 @@
 </ol>
 </div>
 
-   <div class="time">
-     <time datetime="2026-09-28">2026-09-28&nbsp;</time>
 
-     
-     
-       <span class="reading-time"> · 1 min read</span>
-     
-     
-     
-   </div>
+  </div>
 
-  
-  
-    <div class="comments">
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/markdown/">Markdown</a></li>
+      <li><a href="http://localhost:1313/tags/test/">Test</a></li>
+    </ul>
+<nav class="paginav" aria-label="Post navigation">
+  <a class="prev" href="http://localhost:1313/posts/tufte-css/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Tufte CSS</span>
+  </a>
+</nav>
 
-</div>
-  
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">Shua Manory</a></span>
 
-  
-    <div class="terminal-nav">
-      <div class="back-nav">
-        
-          <a href="/posts/" class="back-link">../</a>
-        
-      </div>
-    </div>
-  
-</main>
-    <footer role="contentinfo"><p role="contentinfo">
-  &copy; Copyright 2026 &middot;
-  <a href="https://github.com/ntk148v/shibui">shibui</a>
-</p>
+    <span class="tri-sep" aria-hidden="true">∴</span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>;
+        theme
+        <a href="https://github.com/ouatis/hugo-theme-sigil/" rel="noopener noreferrer" target="_blank">SIGIL</a>
+    </span>
 </footer>
-  </body>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M204.24,116.24a6,6,0,0,1-8.48,0L134,54.49V216a6,6,0,0,1-12,0V54.49L60.24,116.24a6,6,0,0,1-8.48-8.48l72-72a6,6,0,0,1,8.48,0l72,72A6,6,0,0,1,204.24,116.24Z"/></svg>
+</a>
+
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", (e) => {
+        const html = document.querySelector("html");
+        const flip = () => {
+            if (html.dataset.theme === "dark") {
+                html.dataset.theme = "light";
+                localStorage.setItem("pref-theme", "light");
+            } else {
+                html.dataset.theme = "dark";
+                localStorage.setItem("pref-theme", "dark");
+            }
+             
+            document.dispatchEvent(new CustomEvent("sg:themechange", { detail: { theme: html.dataset.theme } }));
+        };
+        
+
+        if (!document.startViewTransition || matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            flip();
+            return;
+        }
+        let x = e.clientX, y = e.clientY;
+        if (!x && !y) {
+            const r = e.currentTarget.getBoundingClientRect();
+            x = r.left + r.width / 2;
+            y = r.top + r.height / 2;
+        }
+        const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        const transition = document.startViewTransition(flip);
+        transition.ready.then(() => {
+            document.documentElement.animate(
+                {
+                    clipPath: [
+                        `circle(0px at ${x}px ${y}px)`,
+                        `circle(${endRadius}px at ${x}px ${y}px)`,
+                    ],
+                },
+                {
+                    duration: 400,
+                    easing: "ease-in-out",
+                    pseudoElement: "::view-transition-new(root)",
+                },
+            );
+        });
+    })
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
 </html>
