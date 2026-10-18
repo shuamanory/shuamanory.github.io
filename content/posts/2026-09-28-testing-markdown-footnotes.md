@@ -8,6 +8,6 @@ tags: ['markdown', 'test']
 categories: []
 ---
 
-Apparently markdown support simple, automatically linked footnotes.[^hmm] 
+Apparently markdown supports simple, automatically linked footnotes.[^hmm] 
 
 [^hmm]: It works! Honestly pretty cool, better than I expected. Although this isn't native markdown - it's an extension. I managed to install it in my other SSG too, it's amazing.
